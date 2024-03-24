@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>防災マップ</title>
+    </head>
+    <body>
+        <!-- 地図を表示するためのdiv要素 -->
+        <div id="map"></div>
+        <!-- 凡例を表示するためのdiv要素 -->
+        <div id="hazard-legend" class="maplibregl-ctrl-group"></div>
+        <!-- 到達圏レイヤーUI-->
+        <div id="shelter-control" class="maplibregl-ctrl-group">
+            <label>避難所の到達圏 0 m</label>
+            <input type="range" min="0" max="1000" step="1" value="0" />
+        </div>
+        <!-- opacity-controlの表示/非表示を切り替えるためのチェックボックス -->
+        <label id="toggle-button" class="maplibregl-ctrl-group">
+            <input type="checkbox" />
+            レイヤー
+        </label>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>

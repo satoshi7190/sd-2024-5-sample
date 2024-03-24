@@ -1,0 +1,94 @@
+/* デフォルトの余白を消す */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* 災害情報レイヤーのカラーガイド */
+#hazard-legend {
+    position: absolute;
+    inset: auto 10px 30px auto;
+    overflow: hidden;
+    /* 各ラベルのスタイル */
+    > .label {
+        padding: 10px;
+        text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, 0px 1px 0 #fff, 0-1px 0 #fff, -1px 0 0 #fff, 1px 0 0 #fff;
+        font-size: small;
+    }
+}
+
+/* 到達圏レイヤーUI */
+#shelter-control {
+    position: absolute;
+    inset: auto auto 10px 10px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    > label {
+        padding: 10px;
+        font-size: small;
+    }
+    > .input {
+        padding: 10px;
+    }
+}
+
+/* スケールバー */
+.maplibregl-ctrl-scale {
+    margin-right: 130px !important; /* 位置を調整 */
+}
+
+/* PCの場合、トグルボタンは非表示 */
+#toggle-button {
+    display: none;
+}
+
+/* スマホ表示のCSS */
+@media (max-width: 640px) {
+    /* トグルボタン */
+    #toggle-button {
+        display: block;
+        position: absolute;
+        inset: auto auto 10px 10px;
+        padding: 10px;
+        user-select: none;
+        font-size: small;
+        font-weight: bold;
+        > input {
+            display: none;
+        }
+    }
+
+    /* トグルボタン アクティブ時 */
+    #toggle-button:has(input:checked) {
+        color: #33b5e5;
+    }
+
+    /* トグルボタンを状態監視してopacity-controlの表示を制御 */
+    body:has(#toggle-button > input:not(:checked)) #opacity-control {
+        display: none !important;
+    }
+
+    /* 災害情報レイヤーのカラーガイドを非表示 */
+    #hazard-legend {
+        display: none;
+    }
+
+    /* 到達圏レイヤーUIを非表示  */
+    #shelter-control {
+        display: none !important;
+    }
+
+    /* スケールバーの位置を調整 */
+    .maplibregl-ctrl-scale {
+        margin-right: 10px !important;
+    }
+}

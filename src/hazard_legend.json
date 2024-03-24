@@ -1,0 +1,66 @@
+[
+    {
+        "id": "flood_layer",
+        "name": "洪水浸水想定区域",
+        "guide_color": [
+            { "color": "#DC7ADC", "label": "20.0m以上" },
+            { "color": "#F286C9", "label": "10.0〜20.0m" },
+            { "color": "#FF9091", "label": "5.0〜10.0m" },
+            { "color": "#FFB7B7", "label": "3.0〜5.0m" },
+            { "color": "#FFD8C0", "label": "0.5〜3.0m" },
+            { "color": "#F0F0A0", "label": "0.5未満" }
+        ]
+    },
+    {
+        "id": "hightide_layer",
+        "name": "高潮浸水想定区域",
+        "guide_color": [
+            { "color": "#DC7ABC", "label": "20.0m以上" },
+            { "color": "#F285C9", "label": "10.0〜20.0m" },
+            { "color": "#FF9191", "label": "5.0〜10.0m" },
+            { "color": "#FFB7B7", "label": "3.0〜5.0m" },
+            { "color": "#FFD8C0", "label": "1.0〜3.0m" },
+            { "color": "#F8E1A6", "label": "0.5〜1.0m" },
+            { "color": "#F7F5A9", "label": "0.3〜0.5m" },
+            { "color": "#FEFFB3", "label": "0.3未満" }
+        ]
+    },
+    {
+        "id": "tsunami_layer",
+        "name": "津波浸水想定区域",
+        "guide_color": [
+            { "color": "#DC7ABC", "label": "20.0m以上" },
+            { "color": "#F285C9", "label": "10.0〜20.0m" },
+            { "color": "#FF9191", "label": "5.0〜10.0m" },
+            { "color": "#FFB7B7", "label": "3.0〜5.0m" },
+            { "color": "#FFD8C0", "label": "1.0〜3.0m" },
+            { "color": "#F8E1A6", "label": "0.5〜1.0m" },
+            { "color": "#F7F5A9", "label": "0.3〜0.5m" },
+            { "color": "#FEFFB3", "label": "0.3未満" }
+        ]
+    },
+    {
+        "id": "kyukeisha_layer",
+        "name": "急傾斜地",
+        "guide_color": [
+            { "color": "#FA684C", "label": "特別警戒区域" },
+            { "color": "#FFED4C", "label": "警戒区域" }
+        ]
+    },
+    {
+        "id": "doseki_layer",
+        "name": "土石流",
+        "guide_color": [
+            { "color": "#C04B63", "label": "特別警戒区域" },
+            { "color": "#ECD86F", "label": "警戒区域" }
+        ]
+    },
+    {
+        "id": "jisuberi_layer",
+        "name": "地滑り",
+        "guide_color": [
+            { "color": "#CA4B94", "label": "特別警戒区域" },
+            { "color": "#FFB74C", "label": "警戒区域" }
+        ]
+    }
+]
